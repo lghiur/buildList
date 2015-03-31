@@ -1,0 +1,12 @@
+@import "compass/css3";
+@import 'reset';
+@import 'grid';
+@import 'colors';
+@import 'icons'; 
+
+body {
+	@include background-image(linear-gradient(to top left, $White, $LightBlue));
+	background-attachment: fixed;
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 12px;
+}

@@ -1,0 +1,5 @@
+.main-wrapper {
+	&.modalOpened {
+		@include filter(blur(2px)); 
+	}
+}

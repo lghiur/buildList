@@ -1,0 +1,27 @@
+<div ng-class="{hidden: !itemData.expanded}" class="col results">
+	<div class="col-1-5 metrics">
+		<div class="fail">
+			<div class="result-box red">{{itemData.results.metrics.text}}</div>
+		</div>
+	</div>
+	<div class="col-1-5 build">
+		<div class="success">
+			<div class="result-box green">{{itemData.results.build.text}}</div>
+		</div>
+	</div>
+	<div class="col-1-5 unit-test">
+		<div class="success">
+			<div class="result-box green">{{itemData.results.unitTest.text}}</div>
+		</div>
+	</div>
+	<div class="col-1-5 functional-test">
+		<div class="success">
+			<div class="result-box green">{{itemData.results.functionalTest.text}}</div>
+		</div>
+	</div>
+	<div class="col-1-5 conclusion">
+		<div class="success">
+			<div class="result-box green">box</div>
+		</div>
+	</div>
+</div>

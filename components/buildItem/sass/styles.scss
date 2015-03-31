@@ -1,0 +1,59 @@
+.table-container {	
+	.table-row {
+		font-size: 13px;
+		margin-bottom: 15px;
+		overflow: hidden;
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		.table-col:first-child {
+			text-align: left;
+		}
+
+		.table-col {
+			line-height: 35px;
+		}
+	}
+
+	.pending-theme {
+		@include background-image(linear-gradient(to bottom right, $LightGray, $White));
+		border: 1px solid $Gray;
+		color: $Gray;
+
+		a {
+			color: $Gray;
+		}
+	}
+
+	.complete-theme {
+		@include background-image(linear-gradient(to bottom right, $LightGreen, $White));
+		border: 1px solid $Green;
+		color: $Green;
+
+		a {
+			color: $Green;
+		}
+	}
+
+	.rejected-theme {
+		@include background-image(linear-gradient(to bottom right, $LightRed, $White));
+		border: 1px solid $Red;
+		color: $Red;
+
+		a {
+			color: $Red;
+		}
+	}
+
+	.running-theme {
+		@include background-image(linear-gradient(to bottom right, $LightBlue2, $White));
+		border: 1px solid $DarkBlue;
+		color: $DarkBlue;
+
+		a {
+			color: $DarkBlue;
+		}
+	}
+}

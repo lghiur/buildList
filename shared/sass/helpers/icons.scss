@@ -1,0 +1,19 @@
+@include font-face("Flaticon", font-files("flaticon/flaticon.ttf", "flaticon/flaticon.eot", "flaticon/flaticon.woff")); 
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before, 
+[class^="icon-"]:after,
+[class*=" icon-"]:after { 
+	font-family: Flaticon;
+	font-size: 25px;
+	font-style: normal;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+.icon-firewall:before {
+	content: "\e000";
+}
+.icon-build:before {
+	content: "\e001";
+}

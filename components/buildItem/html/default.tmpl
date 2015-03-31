@@ -1,0 +1,13 @@
+<div ng-class="{loading: itemType.status === 'pending'}" class="grid table-row {{itemType.status}}-theme">
+	<div class="table-col col-1-5">
+		<a href="#" title="Tenrox-R1_1235" class="process-btn" ng-click="displayResults(itemType);"><span class="icon-{{itemType.type}}"></span><span class="process-name">{{itemType.id}}</span></a>
+	</div>
+	<div class="table-col col-1-10"><a href="#" title="owner">{{itemType.owner || '-'}}</a></div>
+	<div class="table-col col-1-5"> {{itemType.timeStarted || '-'}} </div>
+	<div class="table-col col-1-10">{{itemType.status || '-'}}</div>
+	<loader item-jobs="itemType.jobs.metrics"></loader>
+	<loader item-jobs="itemType.jobs.build"></loader> 
+	<loader item-jobs="itemType.jobs.unitTest"></loader>
+	<loader item-jobs="itemType.jobs.functionalTest"></loader> 
+	<item-details item-data="itemType"></item-details>
+</div> 

@@ -1,0 +1,26 @@
+.table-container {
+	margin-bottom: 11px;
+	min-width: 1024px; 
+	padding: 10px;
+	text-align: center;
+
+	.table-header {
+		font-size: 14px;
+		margin-bottom: 10px;
+
+		.table-col:first-child {
+			text-align: left;
+		}
+	}
+
+	.table-col {
+		padding: 0 5px;
+	}
+
+	.process-btn {
+		vertical-align: middle;
+		&:hover .process-name {
+			text-decoration: underline;
+		}
+	}
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Build list</title>
+
+	<link rel="stylesheet" type="text/css" href="shared/sass/main.css">
+
+	<script src="data/mockups.js"></script>
+
+</head>
+<body ng-app="buildApp">
+	<div class="main-wrapper" ng-controller="mainController" ng-class="{modalOpened: modalOpened}">
+		<build-list ng-controller="buildListController"></build-list>
+	</div>
+	<modal modal-opened="false" text-message="defaultmessage"></modal>
+
+	<!-- build:js shared/js/libs.js -->
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-mocks/angular-mocks.js"></script>
+	<!-- endbuild -->
+
+	<!-- build:js shared/js/app.min.js -->
+	<script src="shared/js/app.js"></script>
+	<script src="shared/js/stub.js"></script> 
+	<script src="shared/js/templates/script.js"></script>
+	<script src="components/mainWrapper/js/mainWrapper.controller.js"></script>
+	<script src="components/buildList/js/buildList.service.js"></script>
+	<script src="components/buildList/js/buildList.controller.js"></script> 
+	<script src="components/buildList/js/buildList.directive.js"></script>
+	<script src="components/buildItem/js/buildItem.directive.js"></script>
+	<script src="components/loader/js/loader.directive.js"></script>
+	<script src="components/itemDetails/js/itemDetails.directive.js"></script>
+	<script src="components/modal/js/modal.directive.js"></script>
+	<!-- endbuild --> 
+</body>
+</html>

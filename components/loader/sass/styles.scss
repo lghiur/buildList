@@ -1,0 +1,41 @@
+.table-container {
+
+	.loading-box { 
+		background: $Gray image-url("loader.gif") no-repeat center center;
+		border: 1px solid $DarkGray;
+		display: inline-block;
+		height: 30px;
+		overflow: hidden;
+		text-align: left;
+		vertical-align: middle;
+		width: 70%;
+
+		span {
+			display: inline-block;
+			height: 100%;
+			width: 0%;
+			@include transition-property(width);
+		  @include transition-duration(0.6s);
+		  @include transition-timing-function(ease-in);
+		}
+
+		@mixin loader-theme($color) {
+			background: $Gray;
+			span {
+				background: $color;
+			}
+		}
+
+		&.running {
+			@include loader-theme($Blue);
+		}
+
+		&.complete {
+			@include loader-theme($Green);
+		}
+
+		&.rejected {
+			@include loader-theme($Red);
+		}
+	}
+}

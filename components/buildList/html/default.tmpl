@@ -1,0 +1,15 @@
+<section class="table-container">
+	<header class="grid table-header">
+		<span class="table-col col-1-5">Changelist/Build</span>
+		<span class="table-col col-1-10">Owner</span>
+		<span class="table-col col-1-5">Time Started</span>
+		<span class="table-col col-1-10">State</span>
+		<span class="table-col col-1-10">Metrics</span>
+		<span class="table-col col-1-10">Build</span> 
+		<span class="table-col col-1-10">Unit Test</span>
+		<span class="table-col col-1-10">Functional Test</span>
+	</header>
+	
+	<build-item ng-repeat-start="build in buildList" item-type="build" on-expand="displayResults" ng-model="buildList"></build-item>
+	<build-item ng-repeat-end ng-repeat="firewall in build.firewalls" item-type="firewall" on-expand="displayResults" ng-model="buildList"></build-item>
+</section>
