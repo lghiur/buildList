@@ -98,6 +98,45 @@ module.exports = function(grunt) {
 				mangle: false
 		  } 
 		},
+		sonarRunner: {
+	    analysis: {
+	      options: {
+	        debug: true,
+	        separator: '\n',
+	        sonar: {
+	          host: {
+	            url: 'http://localhost:9000'
+	          },
+	          jdbc: {
+	            url: 'jdbc:mysql://localhost:3306/fesonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance',
+	            username: 'sonar',
+	            password: 'sonar'
+	          },
+	          analysis: {
+	              mode: "preview"
+	          },
+	          issuesReport: {
+	            html: {
+	              location: 'target/',
+	              enable: true
+	            }
+	          },
+	          github: {
+	            login: 'lghiur',
+	            oauth: 'e4a37fb229d5b7a1f710c92970602c6599479737',
+	            repository: 'lghiur/buildList',
+	            pullRequest: '1'
+	          },
+	          projectKey: 'sonar:grunt-sonar-runner:0.1.0',
+	          projectName: 'Pure 360',
+	          projectVersion: '0.0.1',
+	          sources: ['components'].join(','),
+	          language: 'js',
+	          sourceEncoding: 'UTF-8'
+	        }
+	      }
+	    }
+	  },
 		watch: {
 			images: {
 				files: ['components/**/images/**/*.gif', 'components/**/images/**/*.png', 'components/**/images/**/*.jpg'],
@@ -139,6 +178,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-usemin');
+	grunt.loadNpmTasks('grunt-sonar-runner');
 
 	grunt.registerTask('build', [
 		'compass',
